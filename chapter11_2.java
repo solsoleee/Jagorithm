@@ -14,18 +14,17 @@ public class chapter11_2 {
 
         int num1=number.charAt(0)-'0'; //처음꺼
 
-        for(int i=0; i< number.length()-1; i++){
+        for(int i=1; i< number.length(); i++){
             int num2 = number.charAt(i)-'0'; //현재
 
-            if (num1==0|| num2==1 || num1==0 || num2==1){
+            if (num1==0|| num2==0 || num1==1 || num2==1){
                 num1 = num1+num2;
             }
             else{
                 num1 = num1 * num2;
             }
-
-
         }
+        System.out.println(num1);
 
     }
 }
