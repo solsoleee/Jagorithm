@@ -1,32 +1,32 @@
+package chapter11;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class chapter11_5 {
+public class chapter11_2 {
     private static StringTokenizer tokens;
     private static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
     public static void main(String[] args) throws NumberFormatException, IOException {
-        int n = Integer.parseInt(input.readLine());
-        int arr [] = new int[n];
+
         tokens = new StringTokenizer(input.readLine());
-        for(int i=0; i<n; i++){
-            arr[i] = Integer.parseInt(tokens.nextToken());
-        }
-        Arrays.sort(arr);
-        int min_value=1;
-        for(int a: arr){
-            if(min_value < a){
-                break;
+        String number =tokens.nextToken();
+
+
+        int num1=number.charAt(0)-'0'; //처음꺼
+
+        for(int i=1; i< number.length(); i++){
+            int num2 = number.charAt(i)-'0'; //현재
+
+            if (num1==0|| num2==0 || num1==1 || num2==1){
+                num1 = num1+num2;
             }
             else{
-                min_value +=a;
+                num1 = num1 * num2;
             }
         }
-        System.out.println(min_value);
+        System.out.println(num1);
 
-}
-
+    }
 }

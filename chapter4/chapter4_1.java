@@ -1,3 +1,5 @@
+package chapter4;
+
 import java.awt.image.DataBufferDouble;
 import java.io.*;
 import java.util.Scanner;

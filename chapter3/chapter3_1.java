@@ -1,28 +1,41 @@
+package chapter3;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class chaper3_3 {
+public class chapter3_1 {
+
     private static StringTokenizer tokens;
     private static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
     public static void main(String[] args) throws NumberFormatException, IOException {
         tokens = new StringTokenizer(input.readLine());
-
         int n = Integer.parseInt(tokens.nextToken());
+        int m = Integer.parseInt(tokens.nextToken());
         int k = Integer.parseInt(tokens.nextToken());
 
-        int count=0;
-        while(n!=1){
-            if(n%k==0){
-                count+=1;
-                n/=k;
+        int arr[] = new int[n];
+
+
+
+        tokens = new StringTokenizer(input.readLine());
+        for(int i=0; i<n; i++){
+            arr[i]=Integer.parseInt(tokens.nextToken());
+        }
+        Arrays.sort(arr);
+        int total=0;
+        for(int i=1; i<=m; i++){
+            if (i%3==0){
+                total+=arr[n-2];
             }
             else{
-                n-=1;
-                count+=1;
+                total+=arr[n-1];
             }
         }
-        System.out.println(count);
+        System.out.println(total);
+
     }
 }
