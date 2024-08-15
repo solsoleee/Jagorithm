@@ -1,4 +1,4 @@
-package interable;
+package collection.interable;
 
 import java.util.Iterator;
 

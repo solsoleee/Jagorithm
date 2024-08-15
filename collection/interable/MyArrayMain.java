@@ -1,4 +1,4 @@
-package interable;
+package collection.interable;
 
 public class MyArrayMain {
     public static void main(String[] args){
