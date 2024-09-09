@@ -1,3 +1,5 @@
+package pra;
+
 import java.io.IOException;
 
 public class SubnetTest2 {
