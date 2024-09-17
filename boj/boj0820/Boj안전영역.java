@@ -1,4 +1,4 @@
-package boj0820;
+package boj.boj0820;
 
 import java.io.*;
 import java.util.*;
